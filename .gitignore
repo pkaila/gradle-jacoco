@@ -1,6 +1,4 @@
-*.class
+# Gradle dirs
+build/
+.gradle/
 
-# Package Files #
-*.jar
-*.war
-*.ear
