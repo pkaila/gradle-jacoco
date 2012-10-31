@@ -1,0 +1,28 @@
+apply plugin: 'groovy'
+apply plugin: 'codenarc'
+
+group = 'gradle-jacoco'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.2'
+}
+
+defaultTasks 'clean', 'build'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile gradleApi()
+	groovy localGroovy()
+
+  testCompile 'org.spockframework:spock-core:0.6-groovy-1.8'
+}
+
+codenarc {
+  toolVersion '0.17'
+  configFile file('config/codenarc/codenarc.groovy')
+  sourceSets = [project.sourceSets.main]
+}
+
