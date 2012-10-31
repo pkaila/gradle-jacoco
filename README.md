@@ -3,7 +3,7 @@ Gradle Jacoco plugin
 
 These are the beginnings of a Gradle Jacoco plugin. [Jacoco](http://www.eclemma.org/jacoco/) is a code coverage library for Java. 
 
-The planned feature set includes but is not limited:
+The planned feature set includes but is not limited to:
 - Uses the Jacoco Agent to get the coverage information
 - Easy setup relying on good default configurations
 - Possibility to only collect execution information if the results are analysed by some other tool (e.g. Jenkins)
